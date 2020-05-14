@@ -3,7 +3,7 @@
 ## Клонирование проекта
 
     git clone https://github.com/Konovalov-Kos/Delivery_site.git
-    cd delivery
+    cd delivery_site
 
 ## Деплой проекта
 
