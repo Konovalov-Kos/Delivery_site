@@ -12,4 +12,5 @@
 ## Запуск сервера разработки
 
     cd backend
+    source ./venv/bin/activate
     ./bin/run
