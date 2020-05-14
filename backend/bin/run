@@ -1,0 +1,3 @@
+./venv/bin/activate
+cd delivery_backend
+./manage.py runserver 8000
