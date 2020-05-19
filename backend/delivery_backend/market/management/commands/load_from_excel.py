@@ -16,7 +16,8 @@ class Command(BaseCommand):
 
         print(f'Start importing from excel {DATA_DIR}')
         wb = load_workbook(os.path.join(DATA_DIR, 'price.xlsx'))
-        sheet = wb.get_sheet_names(wb.get_sheet_names()[0])
+        print(wb.get_sheet_names()[0])
+        sheet = wb.get_sheet_by_name(wb.get_sheet_names()[0])
         single_category = None
 
         for row in range(1, sheet.max_row+1):
@@ -32,5 +33,5 @@ class Command(BaseCommand):
                 if single_category:
                     single_product = Product()
                     single_product.name = item
-                    single_product.category = single_category()
+                    single_product.category = single_category
                     single_product.save()
